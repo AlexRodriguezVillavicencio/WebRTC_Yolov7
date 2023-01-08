@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+input {
+    width: 350px;
+}
+
+.container__window{
+    margin-left: 50px;
+    margin-top: 70px;
+    width: 600px;
+    height: 560px;
+    background-color: rgb(87, 83, 81);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#container__video2{
+    display: none;
+}
+
+#select_webcam_rstp{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    text-align: center;
+}
+
+.container__video{
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    height: 480px;
+    text-align: center;
+}
+
+#container__video1 video,
+#container__video2 video{
+    background-color: black;
+    width: 560px;
+    height: 400px;
+}

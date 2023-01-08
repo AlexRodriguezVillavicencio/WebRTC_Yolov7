@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC_Yolov7</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+     <div class="container__window">
+       <select id="select_webcam_rstp">
+        <option value="webcam">WebCam</option>
+        <option value="urls_stp">URL RTSP</option>
+       </select>
+       <div class="container__video">
+          <div id="container__video1">
+               <h1>Webcam</h1>
+               <button onclick="startWebcam()">Iniciar webcam</button>
+               <button onclick="stopWebcam()">Detener webcam</button>
+               <br /><br />
+               <video id="webcam__video" autoplay></video>
+          </div>
+          <div id="container__video2">
+               <h1>Transmisión RTSP</h1>
+               <label for="url_rtsp" style="font-size:13px; font-family: 'Courier New'">URL RTSP:</label>
+               <input type="text" id="entrada_url" name="url_rtsp" />
+               <button id="salida_url">Enviar</button>
+               <br /><br />
+               <video id="rtsp__video" autoplay></video>
+          </div>
+       </div>
+     </div>
+   </div>
+<script src="js/webcam.js"></script>
+  </body>
+</html>
