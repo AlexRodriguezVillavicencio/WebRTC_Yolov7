@@ -9,7 +9,14 @@ h1{
 }
 
 input {
-    width: 350px;
+    width: 415px;
+    font-size: 12px;
+}
+
+label{
+    margin-left: 0px;
+    font-size:13px; 
+    font-family: 'Courier New'; 
 }
 
 .container__window{
@@ -23,8 +30,10 @@ input {
     position: relative;
 }
 
-#container__video2{
+#container__video2,
+.container__video2__child2{
     display: none;
+    width: 560px;
 }
 
 #select_webcam_rstp{
@@ -42,9 +51,31 @@ input {
     text-align: center;
 }
 
-#container__video1 video,
-#container__video2 video{
+#container__video1 video{
     background-color: black;
     width: 560px;
     height: 400px;
+}
+
+/* rtsp video */
+#container__video2{
+    position: relative;
+}
+
+.fp-Video {
+    background-color: black;
+    width: 560px;
+    height: 400px;
+    position: absolute;
+    top: 93px;
+}
+.display {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.display > video,
+object {
+    width: 100%;
+    height: 100%;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebRTC_Yolov7</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script>
   </head>
   <body>
      <div class="container__window">
@@ -18,20 +19,33 @@
                <h1>Webcam</h1>
                <button onclick="startWebcam()">Iniciar webcam</button>
                <button onclick="stopWebcam()">Detener webcam</button>
-               <br /><br />
+               <br /><br /> <br>
                <video id="webcam__video" autoplay></video>
           </div>
           <div id="container__video2">
-               <h1>Transmisión RTSP</h1>
-               <label for="url_rtsp" style="font-size:13px; font-family: 'Courier New'">URL RTSP:</label>
-               <input type="text" id="entrada_url" name="url_rtsp" />
-               <button id="salida_url">Enviar</button>
+               <div class="container__video2__child1">
+                    <h1>Transmisión RTSP</h1>
+                    <label for="url_rtsp">URL RTSP:</label>
+                    <input type="text" id="entrada_url" oninput="handleValueChange(this)"/>
+                    <button id="salida_url">Conectar</button>
+                    <p id="validationurl"></p>
+               </div>
+               <div class="container__video2__child2">
+                    <h1>Transmisión RTSP</h1>
+                    <button id="playBtnRTSP" onclick="startRTSP()" >Iniciar Transmisión</button>
+                    <button onclick="stopRTSP()">Desconectar</button>
+                    <p id="text_conectedRTSP"  style="margin-top:5px"></p>
+               </div>
                <br /><br />
-               <video id="rtsp__video" autoplay></video>
+               <div class="fp-Video">
+                    <div id="play" class="display"></div>
+               </div>
           </div>
        </div>
      </div>
    </div>
-<script src="js/webcam.js"></script>
+   <script src="js/helpers.js"></script>
+     <script src="js/webcam.js"></script>
+     <script src="js/rtsp.js"></script>
   </body>
 </html>
