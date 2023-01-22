@@ -31,7 +31,8 @@ label{
 }
 
 #container__video2,
-.container__video2__child2{
+.container__video2__child2,
+#container__image{
     display: none;
     width: 560px;
 }

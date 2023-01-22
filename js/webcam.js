@@ -8,10 +8,17 @@ select.addEventListener('change' , function() {
 if( this.value === 'webcam'){
      document.querySelector('#container__video1').style.display = 'block'
      document.querySelector('#container__video2').style.display = 'none'
+     document.querySelector('#container__image').style.display = 'none'
 }
-if( this.value === 'urls_stp'){
+else if( this.value === 'urls_stp'){
      document.querySelector('#container__video1').style.display = 'none'
      document.querySelector('#container__video2').style.display = 'block'
+     document.querySelector('#container__image').style.display = 'none'
+}
+else if( this.value === 'image_data'){
+     document.querySelector('#container__video1').style.display = 'none'
+     document.querySelector('#container__video2').style.display = 'none'
+     document.querySelector('#container__image').style.display = 'block'
 }
 });
 

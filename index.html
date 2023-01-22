@@ -13,6 +13,7 @@
        <select id="select_webcam_rstp">
         <option value="webcam">WebCam</option>
         <option value="urls_stp">URL RTSP</option>
+        <option value="image_data">Subir Imagen</option>
        </select>
        <div class="container__video">
           <div id="container__video1">
@@ -41,11 +42,16 @@
                     <div id="play" class="display"></div>
                </div>
           </div>
+          <div id="container__image">
+               <input type="file" id="upload_image">
+               <canvas id="canvasImage" width="560" height="400"></canvas>
+          </div>
        </div>
      </div>
    </div>
    <script src="js/helpers.js"></script>
      <script src="js/webcam.js"></script>
      <script src="js/rtsp.js"></script>
+     <script src="js/image.js"></script>
   </body>
 </html>
